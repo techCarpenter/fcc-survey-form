@@ -7,12 +7,62 @@
   </head>
 
   <body>
-      <header>
-      </header>
-      <article>
-      </article>
-      <footer>
-      </footer>
+    <div>
+      <h1 id="title">Survey Form</h1>
+      <div id="form-container">
+        <p id="description">Tell us a little about yourself.</p>
+        <form id="survey-form">
+          <div class="row-class">
+            <div class="label-column"><label id="name-label" for="name"><span class="required-label">* </span>Name:
+              </label></div>
+            <div class="right-column"><input id="name" placeholder="Enter your name" type="text" required /></div>
+          </div>
+          <div class="row-class">
+            <div class="label-column"><label id="email-label" for="email"><span class="required-label">* </span>Email:
+              </label></div>
+            <div class="right-column"><input id="email" placeholder="Enter your email" type="email" required /></div>
+          </div>
+          <div class="row-class">
+            <div class="label-column"><label id="number-label" for="number"><span class="required-label">* </span>Age:
+              </label></div>
+            <div class="right-column"><input id="number" placeholder="Enter your age" type="number" min="0" max="140"
+                required /></div>
+          </div>
+          <div class="row-class">
+            <div class="label-column"><label id="dropdown-label" for="feeling">How are you feeling today?</label></div>
+            <div class="right-column"><select id="dropdown" name="feeling">
+                <option disabled value="selectOption">Select an option</option>
+                <option value="happy">Happy</option>
+                <option value="sad">Sad</option>
+                <option value="average">Average</option>
+                <option value="content">Content</option>
+              </select></div>
+          </div>
+          <div class="row-class">
+            <div class="label-column"><label id="radio-label" for="continent">What Continent are you From?</label></div>
+            <div class="right-column"><ol class="radio-list" style="list-style: none;">
+              <li class="radio"><label><input type="radio" name="continent" value="north america">North America</label></li>
+              <li class="radio"><label><input type="radio" name="continent" value="south america">South America</label></li>
+              <li class="radio"><label><input type="radio" name="continent" value="europe">Europe</label></li>
+              <li class="radio"><label><input type="radio" name="continent" value="asia">Asia</label></li>
+              <li class="radio"><label><input type="radio" name="continent" value="antarctica">Antarctica</label></li>
+              <li class="radio"><label><input type="radio" name="continent" value="australia">Australia</label></li>
+              <li class="radio"><label><input type="radio" name="continent" value="africa">Africa</label></li>
+            </ol></div>
+          </div>
+          <div class="row-class">
+            <div class="label-column"><label></label></div>
+            <div class="right-column"><ul style="list-style: none;">
+              <li><label><input type="checkbox" value="">testing...</label></li>
+            </ul></div>
+          </div>
+          <div class="row-class">
+            <div class="label-column"><label id="" for=""></label></div>
+            <div class="right-column"><textarea placeholder="comments..."></textarea></div>
+          </div>
+        </form>
+      </div>
+    </div>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
   </body>
 </main>
@@ -20,8 +70,81 @@
 </html>
 
 <style>
-  :root{
-    background-color: lightgray;
+  :root {
+    background-color: rgb(178, 255, 178);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
 
+  #form-container {
+    border-radius: 10px;
+    padding: 10px 10px 10px 10px;
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: rgb(224, 224, 224);
+  }
+
+  #description {
+    text-align: center;
+  }
+
+  #title {
+    text-align: center;
+  }
+
+  #description {
+    height: 25px;
+  }
+
+  .required-label {
+    color: red;
+  }
+
+  .radio-list {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+  }
+
+  .label-column {
+    margin-right: 10px;
+    width: 50%;
+    height: 25px;
+    text-align: right;
+  }
+
+  .right-column {
+    margin-left: 10px;
+    width: 50%;
+    align-content: left;
+  }
+
+  .row-class {
+    padding: 10px 10px 10px 10px;
+    display: flex;
+    grid-template-columns: 400px, 400px;
+  }
+
+  label {
+    vertical-align: middle;
+  }
+
+  input {
+    width: 200px;
+    height: 25px;
+  }
+
+  [type="radio"] {
+    width: auto;
+    height: auto;
+  }
+
+  textarea {
+    width: 300px;
+    max-width: 300px;
+    resize: vertical;
+  }
+
+  select {
+    width: 100px;
+  }
 </style>
